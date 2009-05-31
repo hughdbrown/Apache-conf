@@ -1,0 +1,32 @@
+# apache_template.txt
+NameVirtualHost *:80
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@{server_name!s}
+    ServerName {server_name!s}
+
+    DocumentRoot "{source_dir!s}/{project_name!s}/"
+
+    <Location "/">
+        # without this, you'll get 403 permission errors
+        # Apache - "Client denied by server configuration" 
+        allow from all
+
+        SetHandler python-program
+        PythonHandler django.core.handlers.modpython
+        PythonOption django.root /{project_name!s}
+
+        PythonDebug On
+        PythonPath "[os.path.normpath(s) for s in (r'{source_dir!s}', r'{django_path!s}') ] + sys.path"
+        SetEnv DJANGO_SETTINGS_MODULE {project_name!s}.settings
+        PythonAutoReload Off
+    </Location>
+
+    <Location "/media" >
+        SetHandler None
+    </Location>
+
+    <Location "/site-media" >
+        SetHandler None
+    </Location>
+</VirtualHost>
