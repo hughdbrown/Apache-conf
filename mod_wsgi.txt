@@ -1,0 +1,10 @@
+# Generated from mod_wsgi.txt
+import os
+import sys
+
+sys.path.append("{source_dir!s}/")
+os.environ['DJANGO_SETTINGS_MODULE'] = {project_name!s}.settings
+
+import django.core.handlers.wsgi
+
+application = django.core.handlers.wsgi.WSGIHadnler()

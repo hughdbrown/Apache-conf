@@ -1,4 +1,4 @@
-# apache_template.txt
+# Generated from apache_template.txt
 NameVirtualHost *:80
 
 <VirtualHost *:80>

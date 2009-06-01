@@ -1,0 +1,16 @@
+# Generated from apache_mod_wsgi.txt
+NameVirtualHost *:80
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@{server_name!s}
+    ServerName {server_name!s}
+
+    <Directory "{source_dir!s}/{project_name!s}" >
+        allow from all
+    </Directory>
+
+    Alias /media/ "{source_dir!s}/{project_name!s}/media/"
+    Alias /site-media/ "{source_dir!s}/{project_name!s}/site-media/"
+    
+    WSGIScriptAlias / "{source_dir!s}/{project_name!s}/mod.wsgi"
+</VirtualHost>
