@@ -7,9 +7,18 @@ def encode_resource(resource_name, s) :
 
 if __name__ == "__main__" :
 	import sys
-	for arg in sys.argv[1 : ] :
-		with open(arg) as f :
-			s = f.read()
-			i = arg.index(".txt")
-			resource_name = arg[ : i]
-			print encode_resource(resource_name, s)
+	import glob
+
+	write_file_name = "variable"
+	with open(write_file_name, "w") as variable_file :
+		msg = "Writing '%s'" % (write_file_name, )
+		print >> sys.stderr, msg
+		for arg in glob.glob("*.txt")  :
+			with open(arg) as f :
+				msg = "\tAdding '%s'" % (arg, )
+				print >> sys.stderr, msg
+				s = f.read()
+				i = arg.index(".txt")
+				resource_name = arg[ : i]
+				variable_file.write(encode_resource(resource_name, s))
+
