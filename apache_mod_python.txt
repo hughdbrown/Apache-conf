@@ -31,4 +31,9 @@ NameVirtualHost *:80
         SetHandler None
         allow from all
     </Location>
+    
+    <LocationMatch "\.(jpg|gif|png)$">
+        SetHandler None
+        allow from all
+    </LocationMatch>
 </VirtualHost>

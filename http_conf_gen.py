@@ -31,14 +31,14 @@ def replace_template(format, **kw) :
 
 def main() :
     apache_mod_python = """
-eJyVU8Fu00AQvfsrBveQFhqnEhwQiiIiErWgEldN4YKQtbHH9lbeHWt23BBF/Dtrm0TBRULsafR2
-3pu3M7NnoGqVlpgImrpSgpH8kGClDH7VLI2qbsgJvHz39ioIpkNoFoA/a+Qn5HlmtIUtboxygvx+
-7zo4sV7qhft5ktmKw/C6u19Q2hi0ck8kEO4dNZxikmn2GZN9zfSIqRwok7AnTW8pVaLJQjgJe0ft
-OYOtlpIaASm1u4QdNaOqggIF3ly9hhrZaOdaGjITuxPivOsIjCH8UGlvBzK0GjPY7KB3DSnZXBcN
-d3VDOHJVVdEWcibThsERX6PcKJtVnlrvvCs79o8pWJljxl0HH5KyR2ULilJijMoec5GhrCcPSHHd
-vf43h9vePWtWMOAscNMUEA+l7pSUEH4jF9U+iiyxaYNzdwE5MTjwIz7n0Z+TGV2Ch/rySZveYhfw
-HV6B2/VK4WknlvYJFp/mq+s4WS8fHj6urtfJ53jx5XYJQ9uRQxFtCzfwOW+E7rEilUGc5/0aTA57
-MHu+FwYzrUKY/W0gK7L4bwWnBcf/LTOdnHyZWfALJ+sU9A==
+eJytU8Fu2zAMvfsrOPWQdmvsAuthGIJgwRK0G7q4aLpdhsFQbNpWYYmGRDcNgv37ZLsJMnfDLtOJ
+eOJ7fCKpE5C1TEtMGHVdScaQnzhYSo3flOVGVtfkGF6/f3cRBJMhNA3AnxXaR7SzTCsDG1xr6Rjt
+h53r4MR4qVfu51FmKw7D6+5+Tmmj0fAdEYPYOWpsikmmrM+IdrWlB0x5T4lET5rcUCpZkQERid5R
+e05go7ikhoFL5c5hS82oqqBAhsuLt1Cj1cq5lobWknVHxFnXERiD+FgpbwcyNAozWG+hdw0pmVwV
+je3qCjhwZVXRBnJLug2DA75CvpYmqzy13npXZuwfU1ipDxm3HbxPyh6kKShMyWJY9pgLNWU9eUCK
+6+71zxzb9u5Fs4IBZ47rpoB4KHUruQTxnVxY+yg0ZHUbnLozyMmCAz/iUzv6fTKjc/BQXz5p01vs
+DH7AG3DbXkkcd2JhHmH+eba8ipPV4v7+0/JqlXyJ519vFjC0HTpkVqZwA5+zhukOK5IZxHner0G0
+34Ppy73QmCkpYPqngSzJ4N8G+E9hpxjH/0t9Eh19sGnwC8URIaA=
 """
     apache_mod_wsgi = None
     flavors = { 'mod_python' : apache_mod_python, 'mod_wsgi' : apache_mod_wsgi }
