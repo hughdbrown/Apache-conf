@@ -24,9 +24,11 @@ NameVirtualHost *:80
 
     <Location "/media" >
         SetHandler None
+        allow from all
     </Location>
 
     <Location "/site-media" >
         SetHandler None
+        allow from all
     </Location>
 </VirtualHost>
